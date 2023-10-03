@@ -10,9 +10,16 @@
     "format": "npx prettier --write './src/**/*.{js,jsx,ts,tsx,json,css,scss,md}' --ignore-unknown"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "clsx": "^2.0.0",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sanitize.css": "^13.0.0"
   },
   "devDependencies": {
     "@types/node": "latest",
