@@ -2,6 +2,8 @@
 
 [TEMPLATE PARTY](https://template-party.com/index.html)のテンプレートを使ってNext.jsで構築してみる。
 
+実装中のメモは[zennに書いてる](https://zenn.dev/chiilog/scraps/79f67f8a7ddff2)
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
