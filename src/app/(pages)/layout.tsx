@@ -24,7 +24,7 @@ export default function AboutLayout({
         <nav className="category-menu">
           <ul>
             <li>
-              <Link href="../list/">
+              <Link href="/list/">
                 <span className="line1">
                   <span>子犬</span>を探す
                 </span>
@@ -32,7 +32,7 @@ export default function AboutLayout({
               </Link>
             </li>
             <li>
-              <Link href="../list/">
+              <Link href="/list/">
                 <span className="line1">
                   <span>子猫</span>を探す
                 </span>
@@ -40,7 +40,7 @@ export default function AboutLayout({
               </Link>
             </li>
             <li>
-              <Link href="../list/">
+              <Link href="/list/">
                 <span className="line1">
                   <span>小動物</span>を探す
                 </span>
@@ -48,7 +48,7 @@ export default function AboutLayout({
               </Link>
             </li>
             <li>
-              <Link href="../list/">
+              <Link href="/list/">
                 <span className="line1">
                   <span>お魚</span>を探す
                 </span>

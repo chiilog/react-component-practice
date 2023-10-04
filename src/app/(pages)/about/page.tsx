@@ -148,13 +148,6 @@ export default function About() {
             >
               写真ACさん（無料写真サイト）
             </a>
-            <Image
-              style={{ border: 0 }}
-              src="https://acworks.postaffiliatepro.com/scripts/g5iueh?a_aid=60e590da89d1f&amp;a_bid=35660fdf"
-              width="1"
-              height="1"
-              alt=""
-            />
             がおすすめです。
           </p>
 

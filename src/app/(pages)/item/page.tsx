@@ -7,7 +7,7 @@ export default function Item() {
       <h2>詳細情報</h2>
       <p>
         ※固定画像ではなく、
-        <Link href="../item/movie/">
+        <Link href="/movie/">
           mp4などの動画やYouTube(iframe)で表示させたい場合のサンプルページ
         </Link>
         も用意しています。このページのようなサムネイル切り替えはありません。
