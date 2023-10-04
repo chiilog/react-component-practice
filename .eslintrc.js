@@ -3,7 +3,7 @@ const config = require('eslint-config-next')
 
 module.exports = {
   ...config,
-  parser: 'eslint-config-next/parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     project: './tsconfig.json',
   },
@@ -16,6 +16,7 @@ module.exports = {
     'next/core-web-vitals',
     'eslint:recommended',
     'airbnb',
+    'airbnb-typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
