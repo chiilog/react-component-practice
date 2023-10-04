@@ -1,12 +1,16 @@
+import React from 'react'
+
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+
 import './globals.css'
 import 'sanitize.css'
-import Link from 'next/link'
-import Image from 'next/image'
-import type { Metadata } from 'next'
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
+
 import { config } from '@fortawesome/fontawesome-svg-core'
+import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 config.autoAddCss = false

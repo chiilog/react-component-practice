@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "npx eslint ./src/app --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "npx eslint ./src/app --ext .js,.jsx,.ts,.tsx --fix",
     "format": "npx prettier --write './src/**/*.{js,jsx,ts,tsx,json,css,scss,md}' --ignore-unknown"
   },
   "dependencies": {
