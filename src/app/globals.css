@@ -193,8 +193,8 @@ header {
 /*トップページのheader内のメニューブロック*/
 .home header .category-menu {
   position: absolute; /*headerに対して絶対配置*/
-  bottom: 0px; /*headerブロックに対して下からの配置指定*/
-  left: 0px; /*headerブロックに対して左からの配置指定*/
+  bottom: 0; /*headerブロックに対して下からの配置指定*/
+  left: 0; /*headerブロックに対して左からの配置指定*/
   width: 100%;
 }
 
@@ -280,7 +280,8 @@ header {
 
 /*メニューの１行目の追加設定*/
 .category-menu a .line1 {
-  background: url(./images/uline1.png) repeat-x left bottom / auto 1px; /*ドットラインを背景画像として読み込んでいます。最後の1pxは高さ。例えば2pxにすると大きなドットになります。*/
+  background: url(../../public/images/uline1.png) repeat-x left bottom / auto
+    1px; /*ドットラインを背景画像として読み込んでいます。最後の1pxは高さ。例えば2pxにすると大きなドットになります。*/
 }
 
 /*メニューの１行目の強調文字*/
@@ -337,8 +338,8 @@ header {
   position: fixed;
   overflow: auto;
   z-index: 100;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   padding: 100px 20px 20px; /*ブロック内の余白。上、左右、下。*/
@@ -551,7 +552,7 @@ main.column .main {
 /*アイコン（Font Awesome）*/
 .submenu a::before {
   transition: 0.3s;
-  font-family: 'Font Awesome 5 Free'; /*Font Awesomeを使う指定*/
+  font-family: 'Font Awesome 5 Free', serif; /*Font Awesomeを使う指定*/
   content: '\f0da'; /*使いたいアイコン名をここで指定。Font Awesomeに記載されています。詳しくは当テンプレートのマニュアルを読んで下さい。*/
   color: #ababab; /*アイコンの色*/
   padding-right: 0.8em; /*アイコンとテキストの間の余白*/
@@ -658,8 +659,8 @@ main.column .main {
 }
 .iframe-box iframe {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
 }
@@ -779,7 +780,7 @@ footer .pr {
 /*「動画」アイコンの設定*/
 .list-grid .list .movie::before {
   display: inline-block;
-  font-family: 'Font Awesome 5 Free'; /*Font Awesomeを使う指定*/
+  font-family: 'Font Awesome 5 Free', serif; /*Font Awesomeを使う指定*/
   content: '\f03d'; /*使いたいアイコン名をここで指定。Font Awesomeに記載されています。詳しくは当テンプレートのマニュアルを読んで下さい。*/
   font-weight: bold; /*この設定がないとアイコンが出ない場合があります*/
   margin-right: 0.5em; /*右側に空けるスペース。テキストとの間の余白調整です。*/
@@ -803,6 +804,11 @@ footer .pr {
 }
 
 /*figureのマウスオン時に少し明るくする*/
+.list-grid .list figure a {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+}
 .list-grid .list figure a:hover {
   filter: brightness(1.2);
 }
@@ -976,7 +982,7 @@ footer .pr {
 
 /*アイコン（Font Awesome）*/
 .faq dt::before {
-  font-family: 'Font Awesome 5 Free'; /*Font Awesomeを使う指定*/
+  font-family: 'Font Awesome 5 Free', serif; /*Font Awesomeを使う指定*/
   content: '\f059'; /*アイコンのコード*/
   color: var(
     --primary-color
@@ -1134,7 +1140,7 @@ footer .pr {
 }
 .look {
   display: inline-block;
-  padding: 0px 10px;
+  padding: 0 10px;
   background: rgba(0, 0, 0, 0.03);
   border: 1px solid #ccc;
   border-radius: 3px;
