@@ -30,11 +30,11 @@ body {
 
 body {
   font-family: 'ヒラギノ丸ゴ Pro', 'Hiragino Maru Gothic Pro', 'メイリオ',
-    Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; /*フォント種類*/
+    Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   -webkit-text-size-adjust: none;
-  background: #fff; /*背景色*/
-  color: #777; /*文字色*/
-  line-height: 2; /*行間*/
+  background: #fff;
+  color: #777;
+  line-height: 1.6;
 }
 
 /*リセット*/
@@ -198,21 +198,6 @@ header {
   width: 100%;
 }
 
-/*リンクテキスト*/
-.category-menu a {
-  text-decoration: none;
-  display: block;
-  color: inherit;
-  padding: 0.3rem 1rem 1rem; /*上、左右、下へのメニュー内の余白。*/
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /*背景色。0,0,0は黒の事で0.5は色が50%出た状態。*/
-  position: relative; /*アイコンを絶対配置する為に必要な指示*/
-}
-
 /*開閉メニューの中のリンク*/
 #menubar .category-menu a {
   background: transparent; /*背景色をリセット（透明）に*/
@@ -249,55 +234,6 @@ header {
 /*アイコンのマウスオン時の共通設定*/
 .category-menu a:hover::before {
   transform: scale(1.1); /*元の1.1倍に拡大*/
-}
-
-/*１つ目のメニューのアイコン*/
-.category-menu li:nth-of-type(1) a::before {
-  content: '\f6d3'; /*使いたいアイコン名をここで指定。Font Awesomeに記載されています。詳しくは当テンプレートのマニュアルを読んで下さい。*/
-}
-
-/*２つ目のメニューのアイコン*/
-.category-menu li:nth-of-type(2) a::before {
-  content: '\f6be'; /*使いたいアイコン名をここで指定。Font Awesomeに記載されています。詳しくは当テンプレートのマニュアルを読んで下さい。*/
-}
-
-/*３つ目のメニューのアイコン*/
-.category-menu li:nth-of-type(3) a::before {
-  content: '\f520'; /*使いたいアイコン名をここで指定。Font Awesomeに記載されています。詳しくは当テンプレートのマニュアルを読んで下さい。*/
-}
-
-/*４つ目のメニューのアイコン*/
-.category-menu li:nth-of-type(4) a::before {
-  content: '\f578'; /*使いたいアイコン名をここで指定。Font Awesomeに記載されています。詳しくは当テンプレートのマニュアルを読んで下さい。*/
-}
-
-/*メニューの１行目と２行目の共通設定（html側ではなくプレビュー時の１行目と２行目のことです）*/
-.category-menu a .line1,
-.category-menu a .line2 {
-  display: block;
-  margin-left: 4rem; /*左に空けるスペース。４文字分。*/
-}
-
-/*メニューの１行目の追加設定*/
-.category-menu a .line1 {
-  background: url(../../public/images/uline1.png) repeat-x left bottom / auto
-    1px; /*ドットラインを背景画像として読み込んでいます。最後の1pxは高さ。例えば2pxにすると大きなドットになります。*/
-}
-
-/*メニューの１行目の強調文字*/
-.category-menu a .line1 span {
-  color: var(
-    --primary-color
-  ); /*css冒頭で指定しているprimary-colorを読み込みます*/
-  font-size: 1.5rem; /*文字サイズを1.5倍に*/
-  margin-right: 0.2em; /*右側に空けるスペース。「を探す」との間に空ける余白です。*/
-}
-
-/*メニューの２行目の追加設定*/
-.category-menu a .line2 {
-  font-size: 0.7rem; /*文字サイズを0.7倍に。*/
-  letter-spacing: 0.1em; /*文字間隔を少しだけ広く*/
-  padding-left: 0.3rem; /*左側に空ける余白*/
 }
 
 /*画面幅800px以下の追加指定*/
