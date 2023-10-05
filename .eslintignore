@@ -3,6 +3,7 @@
 .prettierrc.json
 next.config.js
 tsconfig.json
+tailwind.config.js
 
 # build dir
 build/
