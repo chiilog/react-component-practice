@@ -6,7 +6,20 @@ const meta = {
   title: 'Molecules/HeaderNavigation',
   component: HeaderNavigation,
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+    nav: {
+      control: 'array',
+      description: 'ヘッダー用ナビに表示するリンクの配列',
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          '内部的に `HeaderNavLink` を使用しています。navに渡す配列の各要素は `HeaderNavLink` の `props` と同じです。',
+      },
+    },
+  },
 } satisfies Meta<typeof HeaderNavigation>;
 
 export default meta;
