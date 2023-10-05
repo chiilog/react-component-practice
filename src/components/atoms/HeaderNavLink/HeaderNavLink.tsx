@@ -10,9 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import styles from './HeaderNavLink.module.css';
-
-interface HeaderNavLinkProps {
+export interface HeaderNavLinkProps {
   href: string;
   type: 'dog' | 'cat' | 'other' | 'fish';
   description: string;
@@ -52,18 +50,21 @@ export default function HeaderNavLink({
   }
 
   return (
-    <Link href={href} className={styles.HeaderNavLink}>
+    <Link
+      href={href}
+      className="text-white bg-black/50 flex items-center gap-3 p-4 hover:bg-black/80 transition-colors duration-300"
+    >
       {iconName && (
-        <div className={styles.HeaderNavLink__icon}>
+        <div className="bg-primary basis-12 rounded-full text-2xl shrink-0 flex items-center justify-center w-12 h-12">
           <FontAwesomeIcon icon={iconName} />
         </div>
       )}
-      <div className={styles.HeaderNavLink__text}>
-        <span className={styles.HeaderNavLink__label}>
-          <span className={styles.HeaderNavLink__labelText}>{labelText}</span>
+      <div className="basis-full">
+        <span className="block border-b border-white border-dotted pb-1.5 mb-1.5">
+          <span className="text-primary text-2xl mr-1">{labelText}</span>
           を探す
         </span>
-        <span className={styles.HeaderNavLink__description}>{description}</span>
+        <span className="block text-xs tracking-widest">{description}</span>
       </div>
     </Link>
   );
