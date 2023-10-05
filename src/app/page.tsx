@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
+
+import HeaderNavigation from '@/components/molecules/HeaderNavigation/HeaderNavigation';
 
 export default function Home() {
   return (
@@ -22,42 +24,30 @@ export default function Home() {
           <div className="slide2">slide2</div>
           <div className="slide3">slide3</div>
         </aside>
-        <nav className="category-menu">
-          <ul>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>子犬</span>を探す
-                </span>
-                <span className="line2">Find puppy dogs.</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>子猫</span>を探す
-                </span>
-                <span className="line2">Find puppy cats.</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>小動物</span>を探す
-                </span>
-                <span className="line2">ハムスターや小鳥など</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>お魚</span>を探す
-                </span>
-                <span className="line2">熱帯魚など</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <HeaderNavigation
+          nav={[
+            {
+              href: '/list/',
+              type: 'dog',
+              description: 'Find puppy dogs.',
+            },
+            {
+              href: '/list/',
+              type: 'cat',
+              description: 'Find puppy cats.',
+            },
+            {
+              href: '/list/',
+              type: 'other',
+              description: 'ハムスターや小鳥など',
+            },
+            {
+              href: '/list/',
+              type: 'fish',
+              description: '熱帯魚など',
+            },
+          ]}
+        />
       </header>
 
       <div id="contents">
@@ -149,5 +139,5 @@ export default function Home() {
         </main>
       </div>
     </>
-  )
+  );
 }
