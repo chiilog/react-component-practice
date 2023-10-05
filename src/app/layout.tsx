@@ -1,34 +1,34 @@
-import React from 'react'
+import React from 'react';
 
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import './globals.css'
-import 'sanitize.css'
+import './globals.css';
+import 'sanitize.css';
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { config } from '@fortawesome/fontawesome-svg-core';
+import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
-config.autoAddCss = false
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title:
     'ペットショップ・ブリーダー向け無料ホームページテンプレート tp_petshop1',
   description: 'ここにサイト説明を入れます',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="ja">
-      <body>
+      <body className="font-body">
         <div id="container">
           {children}
 
@@ -171,5 +171,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }
