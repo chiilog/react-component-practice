@@ -11,6 +11,10 @@ const meta = {
       control: 'array',
       description: 'ヘッダー用ナビに表示するリンクの配列',
     },
+    className: {
+      control: 'text',
+      description: 'ページ上でクラスを設定するときに使用',
+    },
   },
   parameters: {
     docs: {

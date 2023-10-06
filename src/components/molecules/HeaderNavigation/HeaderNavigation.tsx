@@ -4,11 +4,15 @@ import HeaderNavLink, {
 
 interface HeaderNavigationProps {
   nav: HeaderNavLinkProps[];
+  className?: string;
 }
 
-export default function HeaderNavigation({ nav }: HeaderNavigationProps) {
+export default function HeaderNavigation({
+  nav,
+  className,
+}: HeaderNavigationProps) {
   return (
-    <nav>
+    <nav className={className}>
       <ul className="flex">
         {nav.map(({ href, type, description }) => (
           <li key={type} className="flex-1">
