@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires,import/no-extraneous-dependencies
-const config = require('eslint-config-next')
+const config = require('eslint-config-next');
 
 module.exports = {
   ...config,
@@ -11,7 +11,17 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['next', 'next/core-web-vitals', 'eslint:recommended', 'airbnb', 'airbnb-typescript', 'plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended', 'prettier', 'plugin:storybook/recommended'],
+  extends: [
+    'next',
+    'next/core-web-vitals',
+    'eslint:recommended',
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
   overrides: [
     ...config.overrides,
     {
@@ -63,9 +73,10 @@ module.exports = {
       },
     ],
     'jsx-a11y/anchor-is-valid': 'off',
+    'react/require-default-props': 'off',
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
   },
-}
+};
