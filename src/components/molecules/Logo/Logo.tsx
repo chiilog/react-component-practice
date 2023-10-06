@@ -13,7 +13,7 @@ export default function Logo({ src, className }: LogoProps) {
   const pathName = usePathname();
   const TAG = pathName === '/' ? 'h1' : 'div';
   return (
-    <TAG id="logo" className={className}>
+    <TAG id="logo" className={`relative ${className}`}>
       <Link href="/">
         <Image src={src} alt="SAMPLE PET SHOP" fill />
       </Link>

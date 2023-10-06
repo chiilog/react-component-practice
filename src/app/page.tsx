@@ -22,7 +22,7 @@ export default function Home() {
         <div className="absolute left-[5%] top-[10%] z-10">
           <Logo
             src="/images/logo_home.png"
-            className="relative z-10 w-[350px] h-[111px] max-sm:w-[150px] max-sm:h-[47px]"
+            className="z-10 w-[350px] h-[111px] max-sm:w-[150px] max-sm:h-[47px]"
           />
         </div>
         <Swiper
