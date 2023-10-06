@@ -52,10 +52,10 @@ export default function HeaderNavLink({
   return (
     <Link
       href={href}
-      className="text-white bg-black/50 flex items-center gap-3 p-4 hover:bg-black/80 transition-colors duration-300"
+      className="group text-white bg-black/50 flex items-center gap-3 p-4 hover:bg-black/80 transition-colors duration-300"
     >
       {iconName && (
-        <div className="bg-primary basis-12 rounded-full text-2xl shrink-0 flex items-center justify-center w-12 h-12">
+        <div className="group-hover:scale-110 transition-transform duration-300 bg-primary basis-12 rounded-full text-2xl shrink-0 flex items-center justify-center w-12 h-12">
           <FontAwesomeIcon icon={iconName} />
         </div>
       )}
