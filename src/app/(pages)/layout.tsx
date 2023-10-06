@@ -1,64 +1,50 @@
-import React from 'react'
+'use client';
 
-import Image from 'next/image'
-import Link from 'next/link'
+import React from 'react';
+
+import HeaderNavigation from '@/components/molecules/HeaderNavigation/HeaderNavigation';
+import Logo from '@/components/molecules/Logo/Logo';
 
 export default function AboutLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
-      <header>
-        <h1 id="logo">
-          <Link href="/">
-            <Image
-              src="/images/logo.png"
-              alt="SAMPLE PET SHOP"
-              width={300}
-              height={30}
-            />
-          </Link>
-        </h1>
-        <nav className="category-menu">
-          <ul>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>子犬</span>を探す
-                </span>
-                <span className="line2">Find puppy dogs</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>子猫</span>を探す
-                </span>
-                <span className="line2">Find puppy cats</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>小動物</span>を探す
-                </span>
-                <span className="line2">ハムスターや小鳥など</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>お魚</span>を探す
-                </span>
-                <span className="line2">熱帯魚など</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+      <header className="bg-primary">
+        <div className="flex items-center h-[80px] pl-5">
+          <Logo
+            src="/images/logo.png"
+            className="relative z-10 w-[300px] h-[30px] max-sm:w-[220px] max-sm:h-[22px]"
+          />
+        </div>
+        <HeaderNavigation
+          nav={[
+            {
+              href: '/list/',
+              type: 'dog',
+              description: 'Find puppy dogs.',
+            },
+            {
+              href: '/list/',
+              type: 'cat',
+              description: 'Find puppy cats.',
+            },
+            {
+              href: '/list/',
+              type: 'other',
+              description: 'ハムスターや小鳥など',
+            },
+            {
+              href: '/list/',
+              type: 'fish',
+              description: '熱帯魚など',
+            },
+          ]}
+        />
       </header>
       <div id="contents">{children}</div>
     </>
-  )
+  );
 }

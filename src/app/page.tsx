@@ -1,29 +1,61 @@
+'use client';
+
 import React from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { EffectFade, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/autoplay';
+
 import HeaderNavigation from '@/components/molecules/HeaderNavigation/HeaderNavigation';
+import Logo from '@/components/molecules/Logo/Logo';
 
 export default function Home() {
   return (
     <>
-      <header>
-        <h1 id="logo">
-          <Link href="/">
-            <Image
-              src="/images/logo_home.png"
-              alt="SAMPLE PET SHOP"
-              width={350}
-              height={111}
-            />
-          </Link>
-        </h1>
-        <aside>
-          <div className="slide1">slide1</div>
-          <div className="slide2">slide2</div>
-          <div className="slide3">slide3</div>
-        </aside>
+      <header className="bg-primary relative">
+        <div className="absolute left-[5%] top-[10%] z-10">
+          <Logo
+            src="/images/logo_home.png"
+            className="relative z-10 w-[350px] h-[111px] max-sm:w-[150px] max-sm:h-[47px]"
+          />
+        </div>
+        <Swiper
+          spaceBetween={0}
+          slidesPerView={1}
+          modules={[EffectFade, Autoplay]}
+          effect="fade"
+          fadeEffect={{
+            crossFade: true,
+          }}
+          speed={2500}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+        >
+          <SwiperSlide>
+            <div className="relative aspect-video">
+              <Image src="/images/1.jpg" alt="" fill />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative aspect-video">
+              <Image src="/images/2.jpg" alt="" fill />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative aspect-video">
+              <Image src="/images/3.jpg" alt="" fill />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+
         <HeaderNavigation
           nav={[
             {
@@ -47,6 +79,7 @@ export default function Home() {
               description: '熱帯魚など',
             },
           ]}
+          className="absolute bottom-0 left-0 w-full z-10 max-lg:hidden"
         />
       </header>
 
