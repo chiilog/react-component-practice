@@ -22,7 +22,8 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "sanitize.css": "^13.0.0"
+    "sanitize.css": "^13.0.0",
+    "swiper": "^10.3.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.6",
