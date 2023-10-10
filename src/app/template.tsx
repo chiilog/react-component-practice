@@ -1,12 +1,28 @@
+'use client';
+
 import React from 'react';
 
 import Link from 'next/link';
 
+import HamburgerButton from '@/components/atoms/hamburgerButton/hamburgerButton';
+
 export default function Template({ children }: { children: React.ReactNode }) {
+  /**
+   * ハンバーガーメニューの開閉状態を管理するstate
+   */
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const onHamburgerHandler = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
       {children}
-      <div id="menubar">
+      <div className="fixed right-[30px] top-[16px] z-10">
+        <HamburgerButton onClick={onHamburgerHandler} isOpen={isMenuOpen} />
+      </div>
+
+      <div className="">
         <nav>
           <ul>
             <li>
