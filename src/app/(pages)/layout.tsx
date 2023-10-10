@@ -2,8 +2,8 @@
 
 import React from 'react';
 
+import Logo from '@/components/atoms/Logo/Logo';
 import HeaderNavigation from '@/components/molecules/HeaderNavigation/HeaderNavigation';
-import Logo from '@/components/molecules/Logo/Logo';
 
 export default function AboutLayout({
   children,
