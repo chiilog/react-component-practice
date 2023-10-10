@@ -12,8 +12,8 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 
+import Logo from '@/components/atoms/Logo/Logo';
 import HeaderNavigation from '@/components/molecules/HeaderNavigation/HeaderNavigation';
-import Logo from '@/components/molecules/Logo/Logo';
 
 export default function Home() {
   return (

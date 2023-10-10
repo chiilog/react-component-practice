@@ -3,7 +3,7 @@ import Logo from './Logo';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Molecules/Logo',
+  title: 'Atoms/Logo',
   component: Logo,
   tags: ['autodocs'],
   argTypes: {
