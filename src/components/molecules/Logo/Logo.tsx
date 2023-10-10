@@ -10,6 +10,10 @@ interface LogoProps {
 }
 
 export default function Logo({ src, className }: LogoProps) {
+  /**
+   * URLのパスがトップページであればh1、それ以外はdivを返す。
+   * @see https://nextjs.org/docs/api-reference/next/router#userouter
+   */
   const pathName = usePathname();
   const TAG = pathName === '/' ? 'h1' : 'div';
   return (
