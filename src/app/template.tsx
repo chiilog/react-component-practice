@@ -5,6 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import HamburgerButton from '@/components/atoms/hamburgerButton/hamburgerButton';
+import Drawer from '@/components/molecules/Drawer/Drawer';
 
 export default function Template({ children }: { children: React.ReactNode }) {
   /**
@@ -22,27 +23,36 @@ export default function Template({ children }: { children: React.ReactNode }) {
         <HamburgerButton onClick={onHamburgerHandler} isOpen={isMenuOpen} />
       </div>
 
-      <div className="">
+      <Drawer isOpen={isMenuOpen}>
         <nav>
           <ul>
             <li>
-              <Link href="/">ホーム</Link>
+              <Link href="/" className="text-white block p-2.5">
+                ホーム
+              </Link>
             </li>
             <li>
-              <Link href="/list/">子犬を探す</Link>
+              <Link href="/list/" className="text-white block p-2.5">
+                子犬を探す
+              </Link>
             </li>
             <li>
-              <Link href="/list/">子猫を探す</Link>
+              <Link href="/list/" className="text-white block p-2.5">
+                子猫を探す
+              </Link>
             </li>
             <li>
-              <Link href="/list/">小動物を探す</Link>
+              <Link href="/list/" className="text-white block p-2.5">
+                小動物を探す
+              </Link>
             </li>
             <li>
-              <Link href="/list/">お魚を探す</Link>
+              <Link href="/list/" className="text-white block p-2.5">
+                お魚を探す
+              </Link>
             </li>
           </ul>
         </nav>
-
         <nav className="category-menu">
           <ul>
             <li>
@@ -79,7 +89,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
             </li>
           </ul>
         </nav>
-      </div>
+      </Drawer>
     </>
   );
 }
