@@ -10,17 +10,17 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export interface HeaderNavLinkProps {
+export interface AnimalIconNavLinkProps {
   href: string;
   type: 'dog' | 'cat' | 'other' | 'fish';
   description: string;
 }
 
-export default function HeaderNavLink({
+export default function AnimalIconNavLink({
   href,
   type,
   description,
-}: HeaderNavLinkProps) {
+}: AnimalIconNavLinkProps) {
   /**
    * typeに応じてアイコンを設定する
    */

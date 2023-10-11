@@ -1,10 +1,10 @@
-import HeaderNavigation from './HeaderNavigation';
+import AnimalIconNavList from './AnimalIconNavList';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Molecules/HeaderNavigation',
-  component: HeaderNavigation,
+  title: 'Molecules/AnimalIconNavList',
+  component: AnimalIconNavList,
   tags: ['autodocs'],
   argTypes: {
     nav: {
@@ -24,10 +24,10 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof HeaderNavigation>;
+} satisfies Meta<typeof AnimalIconNavList>;
 
 export default meta;
-type Story = StoryObj<typeof HeaderNavigation>;
+type Story = StoryObj<typeof AnimalIconNavList>;
 
 export const Default: Story = {
   args: {

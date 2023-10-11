@@ -3,7 +3,7 @@
 import React from 'react';
 
 import Logo from '@/components/atoms/Logo/Logo';
-import HeaderNavigation from '@/components/molecules/HeaderNavigation/HeaderNavigation';
+import AnimalIconNavList from '@/components/molecules/AnimalIconNavList/AnimalIconNavList';
 
 export default function AboutLayout({
   children,
@@ -19,7 +19,7 @@ export default function AboutLayout({
             className="w-[300px] h-[30px] max-sm:w-[220px] max-sm:h-[22px]"
           />
         </div>
-        <HeaderNavigation
+        <AnimalIconNavList
           nav={[
             {
               href: '/list/',

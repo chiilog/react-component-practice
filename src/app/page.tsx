@@ -13,7 +13,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 
 import Logo from '@/components/atoms/Logo/Logo';
-import HeaderNavigation from '@/components/molecules/HeaderNavigation/HeaderNavigation';
+import AnimalIconNavList from '@/components/molecules/AnimalIconNavList/AnimalIconNavList';
 
 export default function Home() {
   return (
@@ -56,7 +56,7 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
 
-        <HeaderNavigation
+        <AnimalIconNavList
           nav={[
             {
               href: '/list/',

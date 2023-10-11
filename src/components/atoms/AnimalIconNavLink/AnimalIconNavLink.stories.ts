@@ -1,10 +1,10 @@
-import HeaderNavLink from './HeaderNavLink';
+import AnimalIconNavLink from './AnimalIconNavLink';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Atoms/HeaderNavLink',
-  component: HeaderNavLink,
+  title: 'Atoms/AnimalIconNavLink',
+  component: AnimalIconNavLink,
   tags: ['autodocs'],
   argTypes: {
     href: { control: 'text', description: 'リンク先' },
@@ -15,10 +15,10 @@ const meta = {
     },
     description: { control: 'text', description: '種別の下に表示するテキスト' },
   },
-} satisfies Meta<typeof HeaderNavLink>;
+} satisfies Meta<typeof AnimalIconNavLink>;
 
 export default meta;
-type Story = StoryObj<typeof HeaderNavLink>;
+type Story = StoryObj<typeof AnimalIconNavLink>;
 
 export const Dog: Story = {
   args: {
