@@ -1,4 +1,4 @@
-import HamburgerButton from './hamburgerButton';
+import HamburgerButton from './HamburgerButton';
 
 import type { Meta, StoryObj } from '@storybook/react';
 

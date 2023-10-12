@@ -4,7 +4,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import HamburgerButton from '@/components/atoms/hamburgerButton/hamburgerButton';
+import HamburgerButton from '@/components/atoms/HamburgerButton/HamburgerButton';
 import AnimalIconNavList from '@/components/molecules/AnimalIconNavList/AnimalIconNavList';
 import Drawer from '@/components/molecules/Drawer/Drawer';
 
