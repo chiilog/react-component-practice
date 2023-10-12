@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="font-body">
-        <div id="container">
+        <div id="container" className="text-sm lg:text-base">
           {children}
 
           <div className="pagetop">
