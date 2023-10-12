@@ -5,6 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import HamburgerButton from '@/components/atoms/hamburgerButton/hamburgerButton';
+import AnimalIconNavList from '@/components/molecules/AnimalIconNavList/AnimalIconNavList';
 import Drawer from '@/components/molecules/Drawer/Drawer';
 
 export default function Template({ children }: { children: React.ReactNode }) {
@@ -19,12 +20,12 @@ export default function Template({ children }: { children: React.ReactNode }) {
   return (
     <>
       {children}
-      <div className="fixed right-[30px] top-[16px] z-10">
+      <div className="fixed right-[30px] top-[16px] z-20">
         <HamburgerButton onClick={onHamburgerHandler} isOpen={isMenuOpen} />
       </div>
 
       <Drawer isOpen={isMenuOpen}>
-        <nav>
+        <nav className="lg:w-3/12 mx-auto">
           <ul>
             <li>
               <Link href="/" className="text-white block p-2.5">
@@ -53,41 +54,33 @@ export default function Template({ children }: { children: React.ReactNode }) {
             </li>
           </ul>
         </nav>
-        <nav className="category-menu">
-          <ul>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>子犬</span>を探す
-                </span>
-                <span className="line2">Find puppy dogs</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>子猫</span>を探す
-                </span>
-                <span className="line2">Find puppy cats</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>小動物</span>を探す
-                </span>
-                <span className="line2">ハムスターや小鳥など</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/list/">
-                <span className="line1">
-                  <span>お魚</span>を探す
-                </span>
-                <span className="line2">熱帯魚など</span>
-              </Link>
-            </li>
-          </ul>
+        <nav className="lg:w-3/12 mx-auto text-left">
+          <AnimalIconNavList
+            nav={[
+              {
+                href: '/list/',
+                type: 'dog',
+                description: 'Find puppy dogs.',
+              },
+              {
+                href: '/list/',
+                type: 'cat',
+                description: 'Find puppy cats.',
+              },
+              {
+                href: '/list/',
+                type: 'other',
+                description: 'ハムスターや小鳥など',
+              },
+              {
+                href: '/list/',
+                type: 'fish',
+                description: '熱帯魚など',
+              },
+            ]}
+            direction="vertical"
+            itemHasBackground={false}
+          />
         </nav>
       </Drawer>
     </>

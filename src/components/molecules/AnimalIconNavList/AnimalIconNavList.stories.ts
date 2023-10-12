@@ -21,6 +21,10 @@ const meta = {
       control: 'radio',
       description: 'ナビを並列にするか直列にするかを選択',
     },
+    itemHasBackground: {
+      control: 'boolean',
+      description: '各ナビに背景色を表示するかどうか選択',
+    },
   },
   parameters: {
     docs: {
@@ -68,5 +72,12 @@ export const DirectionVertical: Story = {
   args: {
     nav: navItems,
     direction: 'vertical',
+  },
+};
+
+export const NavItemsNoBackground: Story = {
+  args: {
+    nav: navItems,
+    itemHasBackground: false,
   },
 };

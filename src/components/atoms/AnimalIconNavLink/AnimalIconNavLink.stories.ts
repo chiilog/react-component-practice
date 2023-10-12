@@ -14,6 +14,10 @@ const meta = {
       options: ['dog', 'cat', 'other', 'fish'],
     },
     description: { control: 'text', description: '種別の下に表示するテキスト' },
+    hasBackground: {
+      control: 'boolean',
+      description: '背景色を表示するかどうか選択',
+    },
   },
 } satisfies Meta<typeof AnimalIconNavLink>;
 
@@ -49,5 +53,14 @@ export const Fish: Story = {
     href: '#',
     type: 'fish',
     description: '熱帯魚など',
+  },
+};
+
+export const NoBackground: Story = {
+  args: {
+    href: '#',
+    type: 'dog',
+    description: 'Find puppy dogs.',
+    hasBackground: false,
   },
 };

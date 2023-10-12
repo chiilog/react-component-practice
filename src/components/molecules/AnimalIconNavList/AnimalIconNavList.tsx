@@ -6,16 +6,23 @@ interface AnimalIconNavListProps {
   nav: AnimalIconNavLinkProps[];
   className?: string;
   direction?: 'vertical' | 'horizontal';
+  itemHasBackground?: boolean;
 }
 
 export default function AnimalIconNavList({
   nav,
   className,
   direction = 'horizontal',
+  itemHasBackground = true,
 }: AnimalIconNavListProps) {
   const navItem = nav.map(({ href, type, description }) => (
     <li key={type} className="flex-1">
-      <AnimalIconNavLink href={href} type={type} description={description} />
+      <AnimalIconNavLink
+        href={href}
+        type={type}
+        description={description}
+        hasBackground={itemHasBackground}
+      />
     </li>
   ));
 
