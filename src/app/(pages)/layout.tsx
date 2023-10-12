@@ -4,6 +4,7 @@ import React from 'react';
 
 import Logo from '@/components/atoms/Logo/Logo';
 import AnimalIconNavList from '@/components/molecules/AnimalIconNavList/AnimalIconNavList';
+import Container from '@/components/organisms/Container/Container';
 
 export default function AboutLayout({
   children,
@@ -44,7 +45,7 @@ export default function AboutLayout({
           ]}
         />
       </header>
-      <div id="contents">{children}</div>
+      <Container>{children}</Container>
     </>
   );
 }

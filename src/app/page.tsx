@@ -14,6 +14,7 @@ import 'swiper/css/autoplay';
 
 import Logo from '@/components/atoms/Logo/Logo';
 import AnimalIconNavList from '@/components/molecules/AnimalIconNavList/AnimalIconNavList';
+import Container from '@/components/organisms/Container/Container';
 
 export default function Home() {
   return (
@@ -83,7 +84,7 @@ export default function Home() {
         />
       </header>
 
-      <div id="contents">
+      <Container>
         <main>
           <section>
             <h2>テンプレートのご利用前に必ずお読み下さい</h2>
@@ -170,7 +171,7 @@ export default function Home() {
             </div>
           </section>
         </main>
-      </div>
+      </Container>
     </>
   );
 }
