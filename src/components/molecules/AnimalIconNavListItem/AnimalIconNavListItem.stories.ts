@@ -1,10 +1,10 @@
-import AnimalIconNavLink from './AnimalIconNavLink';
+import AnimalIconNavListItem from './AnimalIconNavListItem';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Atoms/AnimalIconNavLink',
-  component: AnimalIconNavLink,
+  title: 'Atoms/AnimalIconNavListItem',
+  component: AnimalIconNavListItem,
   tags: ['autodocs'],
   argTypes: {
     href: { control: 'text', description: 'リンク先' },
@@ -19,10 +19,10 @@ const meta = {
       description: '背景色を表示するかどうか選択',
     },
   },
-} satisfies Meta<typeof AnimalIconNavLink>;
+} satisfies Meta<typeof AnimalIconNavListItem>;
 
 export default meta;
-type Story = StoryObj<typeof AnimalIconNavLink>;
+type Story = StoryObj<typeof AnimalIconNavListItem>;
 
 export const Dog: Story = {
   args: {

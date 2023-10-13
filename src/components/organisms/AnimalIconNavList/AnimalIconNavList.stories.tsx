@@ -1,4 +1,6 @@
-import { AnimalIconNavLinkProps } from '@/components/atoms/AnimalIconNavLink/AnimalIconNavLink';
+import React from 'react';
+
+import AnimalIconNavListItem from '@/components/molecules/AnimalIconNavListItem/AnimalIconNavListItem';
 
 import AnimalIconNavList from './AnimalIconNavList';
 
@@ -9,10 +11,6 @@ const meta = {
   component: AnimalIconNavList,
   tags: ['autodocs'],
   argTypes: {
-    nav: {
-      control: 'array',
-      description: 'ヘッダー用ナビに表示するリンクの配列',
-    },
     className: {
       control: 'text',
       description: 'ページ上でクラスを設定するときに使用',
@@ -20,10 +18,6 @@ const meta = {
     direction: {
       control: 'radio',
       description: 'ナビを並列にするか直列にするかを選択',
-    },
-    itemHasBackground: {
-      control: 'boolean',
-      description: '各ナビに背景色を表示するかどうか選択',
     },
   },
   parameters: {
@@ -39,45 +33,36 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof AnimalIconNavList>;
 
-const navItems: AnimalIconNavLinkProps[] = [
-  {
-    href: '/list/',
-    type: 'dog',
-    description: 'Find puppy dogs.',
-  },
-  {
-    href: '/list/',
-    type: 'cat',
-    description: 'Find puppy cats.',
-  },
-  {
-    href: '/list/',
-    type: 'other',
-    description: 'ハムスターや小鳥など',
-  },
-  {
-    href: '/list/',
-    type: 'fish',
-    description: '熱帯魚など',
-  },
-];
+const navItems: React.ReactNode = (
+  <>
+    <AnimalIconNavListItem
+      href="/list/"
+      type="dog"
+      description="Find puppy dogs."
+    />
+    <AnimalIconNavListItem
+      href="/list/"
+      type="cat"
+      description="Find puppy cats."
+    />
+    <AnimalIconNavListItem
+      href="/list/"
+      type="other"
+      description="ハムスターや小鳥など"
+    />
+    <AnimalIconNavListItem href="/list/" type="fish" description="熱帯魚など" />
+  </>
+);
 
 export const Default: Story = {
   args: {
-    nav: navItems,
+    children: navItems,
   },
 };
 
 export const DirectionVertical: Story = {
   args: {
-    nav: navItems,
+    children: navItems,
     direction: 'vertical',
-  },
-};
-
-export const NavItemsNoBackground: Story = {
-  args: {
-    nav: navItems,
-    itemHasBackground: false,
   },
 };

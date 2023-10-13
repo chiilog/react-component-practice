@@ -5,8 +5,9 @@ import React from 'react';
 import Link from 'next/link';
 
 import HamburgerButton from '@/components/atoms/HamburgerButton/HamburgerButton';
-import AnimalIconNavList from '@/components/molecules/AnimalIconNavList/AnimalIconNavList';
+import AnimalIconNavListItem from '@/components/molecules/AnimalIconNavListItem/AnimalIconNavListItem';
 import Drawer from '@/components/molecules/Drawer/Drawer';
+import AnimalIconNavList from '@/components/organisms/AnimalIconNavList/AnimalIconNavList';
 
 export default function Template({ children }: { children: React.ReactNode }) {
   /**
@@ -55,32 +56,28 @@ export default function Template({ children }: { children: React.ReactNode }) {
           </ul>
         </nav>
         <nav className="lg:w-3/12 mx-auto text-left">
-          <AnimalIconNavList
-            nav={[
-              {
-                href: '/list/',
-                type: 'dog',
-                description: 'Find puppy dogs.',
-              },
-              {
-                href: '/list/',
-                type: 'cat',
-                description: 'Find puppy cats.',
-              },
-              {
-                href: '/list/',
-                type: 'other',
-                description: 'ハムスターや小鳥など',
-              },
-              {
-                href: '/list/',
-                type: 'fish',
-                description: '熱帯魚など',
-              },
-            ]}
-            direction="vertical"
-            itemHasBackground={false}
-          />
+          <AnimalIconNavList direction="vertical">
+            <AnimalIconNavListItem
+              href="/list/"
+              type="dog"
+              description="Find puppy dogs."
+            />
+            <AnimalIconNavListItem
+              href="/list/"
+              type="cat"
+              description="Find puppy cats."
+            />
+            <AnimalIconNavListItem
+              href="/list/"
+              type="other"
+              description="ハムスターや小鳥など"
+            />
+            <AnimalIconNavListItem
+              href="/list/"
+              type="fish"
+              description="熱帯魚など"
+            />
+          </AnimalIconNavList>
         </nav>
       </Drawer>
     </>

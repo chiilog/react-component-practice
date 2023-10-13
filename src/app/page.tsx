@@ -13,7 +13,8 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 
 import Logo from '@/components/atoms/Logo/Logo';
-import AnimalIconNavList from '@/components/molecules/AnimalIconNavList/AnimalIconNavList';
+import AnimalIconNavListItem from '@/components/molecules/AnimalIconNavListItem/AnimalIconNavListItem';
+import AnimalIconNavList from '@/components/organisms/AnimalIconNavList/AnimalIconNavList';
 import Container from '@/components/organisms/Container/Container';
 
 export default function Home() {
@@ -57,31 +58,28 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
 
-        <AnimalIconNavList
-          nav={[
-            {
-              href: '/list/',
-              type: 'dog',
-              description: 'Find puppy dogs.',
-            },
-            {
-              href: '/list/',
-              type: 'cat',
-              description: 'Find puppy cats.',
-            },
-            {
-              href: '/list/',
-              type: 'other',
-              description: 'ハムスターや小鳥など',
-            },
-            {
-              href: '/list/',
-              type: 'fish',
-              description: '熱帯魚など',
-            },
-          ]}
-          className="absolute bottom-0 left-0 w-full z-10 max-lg:hidden"
-        />
+        <AnimalIconNavList className="absolute bottom-0 left-0 w-full z-10 max-lg:hidden">
+          <AnimalIconNavListItem
+            href="/list/"
+            type="dog"
+            description="Find puppy dogs."
+          />
+          <AnimalIconNavListItem
+            href="/list/"
+            type="cat"
+            description="Find puppy cats."
+          />
+          <AnimalIconNavListItem
+            href="/list/"
+            type="other"
+            description="ハムスターや小鳥など"
+          />
+          <AnimalIconNavListItem
+            href="/list/"
+            type="fish"
+            description="熱帯魚など"
+          />
+        </AnimalIconNavList>
       </header>
 
       <Container>
