@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 import HamburgerButton from '@/components/atoms/HamburgerButton/HamburgerButton';
 import AnimalIconNavListItem from '@/components/molecules/AnimalIconNavListItem/AnimalIconNavListItem';
-import Drawer from '@/components/molecules/Drawer/Drawer';
 import AnimalIconNavList from '@/components/organisms/AnimalIconNavList/AnimalIconNavList';
+import Drawer from '@/components/organisms/Drawer/Drawer';
 
 export default function Template({ children }: { children: React.ReactNode }) {
   /**
@@ -22,10 +22,14 @@ export default function Template({ children }: { children: React.ReactNode }) {
     <>
       {children}
       <div className="fixed right-[30px] top-[16px] z-20">
-        <HamburgerButton onClick={onHamburgerHandler} isOpen={isMenuOpen} />
+        <HamburgerButton
+          onClick={onHamburgerHandler}
+          isOpen={isMenuOpen}
+          targetId="Drawer"
+        />
       </div>
 
-      <Drawer isOpen={isMenuOpen}>
+      <Drawer id="Drawer" isOpen={isMenuOpen}>
         <nav className="lg:w-3/12 mx-auto">
           <ul>
             <li>
@@ -61,21 +65,25 @@ export default function Template({ children }: { children: React.ReactNode }) {
               href="/list/"
               type="dog"
               description="Find puppy dogs."
+              hasBackground={false}
             />
             <AnimalIconNavListItem
               href="/list/"
               type="cat"
               description="Find puppy cats."
+              hasBackground={false}
             />
             <AnimalIconNavListItem
               href="/list/"
               type="other"
               description="ハムスターや小鳥など"
+              hasBackground={false}
             />
             <AnimalIconNavListItem
               href="/list/"
               type="fish"
               description="熱帯魚など"
+              hasBackground={false}
             />
           </AnimalIconNavList>
         </nav>
