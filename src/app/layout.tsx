@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="font-body">
+      <body className="font-body text-neutral-600">
         <div id="container" className="text-sm lg:text-base">
           {children}
 
