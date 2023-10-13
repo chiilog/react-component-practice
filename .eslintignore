@@ -4,7 +4,6 @@
 next.config.js
 tsconfig.json
 tailwind.config.js
-_templates
 
 # build dir
 build/
@@ -12,3 +11,4 @@ bin/
 obj/
 out/
 .next/
+.hygen/
