@@ -12,6 +12,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 
+import Heading from '@/components/atoms/Heading/Heading';
 import Logo from '@/components/atoms/Logo/Logo';
 import AnimalIconNavListItem from '@/components/molecules/AnimalIconNavListItem/AnimalIconNavListItem';
 import AnimalIconNavList from '@/components/organisms/AnimalIconNavList/AnimalIconNavList';
@@ -85,9 +86,11 @@ export default function Home() {
       <Container>
         <main>
           <section>
-            <h2>テンプレートのご利用前に必ずお読み下さい</h2>
+            <Heading level="h2">
+              テンプレートのご利用前に必ずお読み下さい
+            </Heading>
 
-            <h3>利用規約のご案内</h3>
+            <Heading level="h3">利用規約のご案内</Heading>
             <p>
               このテンプレートは、
               <a href="https://template-party.com/">Template Party</a>
@@ -116,14 +119,14 @@ export default function Home() {
               を行う事でHP下部の著作を外す事ができます。
             </p>
 
-            <h3>当テンプレートの詳しい使い方は</h3>
+            <Heading level="h3">当テンプレートの詳しい使い方は</Heading>
             <p>
               <Link href="/about/">こちらをご覧下さい。</Link>
             </p>
           </section>
 
           <section>
-            <h2>お知らせ</h2>
+            <Heading level="h2">お知らせ</Heading>
 
             <dl className="new">
               <dt>
@@ -157,7 +160,7 @@ export default function Home() {
           </section>
 
           <section>
-            <h2 className="dn">フォトギャラリー</h2>
+            <Heading level="h2">フォトギャラリー</Heading>
 
             <div className="thumbnail-slide">
               <Image src="/images/1.jpg" alt="" width={247} height={148} />
