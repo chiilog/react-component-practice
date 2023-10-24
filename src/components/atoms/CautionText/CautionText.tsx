@@ -9,7 +9,7 @@ interface CautionTextProps {
 
 export default function CautionText({ children, className }: CautionTextProps) {
   return (
-    <strong className={clsx(className, 'text-red-600 font-medium')}>
+    <strong className={clsx(className, 'text-red-500 font-medium')}>
       {children}
     </strong>
   );
