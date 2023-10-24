@@ -16,5 +16,6 @@ export const Default: Story = {
   args: {
     date: '2023/10/04',
     icon: 'アイコン',
+    children: 'お知らせの内容が入ります。',
   },
 };
