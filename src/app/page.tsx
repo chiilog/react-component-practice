@@ -12,11 +12,16 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 
+import CautionText from '@/components/atoms/CautionText/CautionText';
 import Heading from '@/components/atoms/Heading/Heading';
 import Logo from '@/components/atoms/Logo/Logo';
+import TextLink from '@/components/atoms/TextLink/TextLink';
 import AnimalIconNavListItem from '@/components/molecules/AnimalIconNavListItem/AnimalIconNavListItem';
+import NewsListItem from '@/components/molecules/NewsListItem/NewsListItem';
 import AnimalIconNavList from '@/components/organisms/AnimalIconNavList/AnimalIconNavList';
 import Container from '@/components/organisms/Container/Container';
+import NewsList from '@/components/organisms/NewsList/NewsList';
+import SectionDetail from '@/components/organisms/SectionDetail/SectionDetail';
 
 export default function Home() {
   return (
@@ -86,77 +91,89 @@ export default function Home() {
       <Container>
         <main>
           <section>
-            <Heading level="h2">
+            <Heading level="h2" className="mb-8">
               テンプレートのご利用前に必ずお読み下さい
             </Heading>
 
             <Heading level="h3">利用規約のご案内</Heading>
-            <p>
-              このテンプレートは、
-              <a href="https://template-party.com/">Template Party</a>
-              にて無料配布している『ペットショップ・ブリーダー向け無料ホームページテンプレート
-              tp_petshop1』です。必ずダウンロード先のサイトの
-              <a href="https://template-party.com/read.html">利用規約</a>
-              をご一読の上でご利用下さい。
-            </p>
-            <p>
-              <strong className="color-check">
-                HP最下部の著作表示『Web
-                Design:Template-Party』は無断で削除しないで下さい。
-              </strong>
-              <br />
-              わざと見えなく加工する事も禁止です。
-            </p>
-            <p>
-              <strong className="color-check">
-                下部の著作を外したい場合は
-              </strong>
-              <br />
-              <a href="https://template-party.com/">Template-Party</a>の
-              <a href="https://template-party.com/member.html">
-                ライセンス契約
-              </a>
-              を行う事でHP下部の著作を外す事ができます。
-            </p>
+            <SectionDetail>
+              <p className="my-6">
+                このテンプレートは、
+                <TextLink href="https://template-party.com/" isExternal>
+                  Template Party
+                </TextLink>
+                にて無料配布している『ペットショップ・ブリーダー向け無料ホームページテンプレート
+                tp_petshop1』です。必ずダウンロード先のサイトの
+                <TextLink
+                  href="https://template-party.com/read.html"
+                  isExternal
+                >
+                  利用規約
+                </TextLink>
+                をご一読の上でご利用下さい。
+              </p>
+              <p className="my-6">
+                <CautionText>
+                  HP最下部の著作表示『Web
+                  Design:Template-Party』は無断で削除しないで下さい。
+                </CautionText>
+                <br />
+                わざと見えなく加工する事も禁止です。
+              </p>
+              <p className="my-6">
+                <CautionText>下部の著作を外したい場合は</CautionText>
+                <br />
+                <TextLink href="https://template-party.com/" isExternal>
+                  Template-Party
+                </TextLink>
+                の
+                <TextLink
+                  href="https://template-party.com/member.html"
+                  isExternal
+                >
+                  ライセンス契約
+                </TextLink>
+                を行う事でHP下部の著作を外す事ができます。
+              </p>
+            </SectionDetail>
 
             <Heading level="h3">当テンプレートの詳しい使い方は</Heading>
-            <p>
-              <Link href="/about/">こちらをご覧下さい。</Link>
-            </p>
+            <SectionDetail>
+              <p className="my-6">
+                <Link href="/about/">こちらをご覧下さい。</Link>
+              </p>
+            </SectionDetail>
           </section>
 
           <section>
             <Heading level="h2">お知らせ</Heading>
 
-            <dl className="new">
-              <dt>
-                2023/09/03<span>アイコン</span>
-              </dt>
-              <dd>
-                list.htmlの.listのスタイルで、なくてもいいスタイル(grid-row)が数箇所あったので削除。既にご利用中のお客様はそのままでも問題はございません。
-              </dd>
-              <dt>
-                2023/08/23<span>アイコン</span>
-              </dt>
-              <dd>
-                ペットショップ・ブリーダー向け無料ホームページテンプレート
-                tp_petshop1公開。
-              </dd>
-              <dt>
-                20XX/00/00<span className="icon-bg1">アイコン１</span>
-              </dt>
-              <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-              <dt>
-                20XX/00/00<span className="icon-bg2">アイコン２</span>
-              </dt>
-              <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-              <dt>20XX/00/00</dt>
-              <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-              <dt>20XX/00/00</dt>
-              <dd>
-                サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
-              </dd>
-            </dl>
+            <SectionDetail>
+              <NewsList>
+                <NewsListItem date="2023/09/03" icon="アイコン">
+                  list.htmlの.listのスタイルで、なくてもいいスタイル(grid-row)が数箇所あったので削除。既にご利用中のお客様はそのままでも問題はございません。
+                </NewsListItem>
+                <NewsListItem date="2023/08/23" icon="アイコン">
+                  ペットショップ・ブリーダー向け無料ホームページテンプレート
+                  tp_petshop1公開。
+                </NewsListItem>
+                <NewsListItem date="20XX/00/00" icon="アイコン１">
+                  サンプルテキスト。サンプルテキスト。サンプルテキスト。
+                </NewsListItem>
+                <NewsListItem date="20XX/00/00" icon="アイコン２">
+                  サンプルテキスト。サンプルテキスト。サンプルテキスト。
+                </NewsListItem>
+                <NewsListItem date="20XX/00/00" icon="アイコン２">
+                  サンプルテキスト。サンプルテキスト。サンプルテキスト。
+                </NewsListItem>
+                <NewsListItem date="20XX/00/00">
+                  サンプルテキスト。サンプルテキスト。サンプルテキスト。
+                </NewsListItem>
+                <NewsListItem date="20XX/00/00">
+                  サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
+                </NewsListItem>
+              </NewsList>
+            </SectionDetail>
           </section>
 
           <section>
